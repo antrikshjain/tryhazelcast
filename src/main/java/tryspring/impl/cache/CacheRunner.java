@@ -17,13 +17,23 @@ public class CacheRunner  implements CommandLineRunner
 
     public void run(String... args) throws Exception
     {
-/*        System.out.println(LocalDateTime.now() + ":" + bookRepo.getAuthor("1"));
-        System.out.println(LocalDateTime.now() + ":" + bookRepo.getAuthor("1"));
-        System.out.println(LocalDateTime.now() + ":" + bookRepo.getAuthor("1"));
-        System.out.println(LocalDateTime.now() + ":" + bookRepo.getAuthor("1"));
-        System.out.println(LocalDateTime.now() + ":" + bookRepo.getAuthor("2"));
-        System.out.println(LocalDateTime.now() + ":" + bookRepo.getAuthor("2"));
-        System.out.println(LocalDateTime.now() + ":" + bookRepo.getAuthor("2"));
-        System.out.println(LocalDateTime.now() + ":" + bookRepo.getAuthor("2"));*/
+        System.out.println(LocalDateTime.now() + ":CACHE:" + bookRepo.getAuthor("1"));
+        System.out.println(LocalDateTime.now() + ":CACHE:" + bookRepo.getAuthor("1"));
+        System.out.println(LocalDateTime.now() + ":CACHE:" + bookRepo.getAuthor("1"));
+        System.out.println(LocalDateTime.now() + ":CACHE:" + bookRepo.getAuthor("1"));
+        System.out.println(LocalDateTime.now() + ":CACHE:" + bookRepo.getAuthor("2"));
+        System.out.println(LocalDateTime.now() + ":CACHE:" + bookRepo.getAuthor("2"));
+        System.out.println(LocalDateTime.now() + ":CACHE:" + bookRepo.getAuthor("2"));
+        System.out.println(LocalDateTime.now() + ":CACHE:" + bookRepo.getAuthor("2"));
+
+        System.out.println("---------------------");
+
+        System.out.println(LocalDateTime.now() + ":CACHE BY BOOK1:" + bookRepo.getAuthor(new BookDTO("1")));
+        System.out.println(LocalDateTime.now() + ":CACHE BY BOOK1:" + bookRepo.getAuthor(new BookDTO("1")));
+        System.out.println(LocalDateTime.now() + ":CACHE BY BOOK1:" + bookRepo.getAuthor(new BookDTO("1")));
+        System.out.println(LocalDateTime.now() + ":CACHE BY BOOK2:" + bookRepo.getAuthor(new BookDTO("2")));
+        System.out.println(LocalDateTime.now() + ":CACHE BY BOOK2:" + bookRepo.getAuthor(new BookDTO("2")));
+        System.out.println(LocalDateTime.now() + ":CACHE BY BOOK2:" + bookRepo.getAuthor(new BookDTO("2")));
     }
+
 }

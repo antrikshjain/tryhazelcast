@@ -11,6 +11,6 @@ public class OutsideApp
 
     public void m()
     {
-
+        //System.out.println("OutsideAPP: m");
     }
 }

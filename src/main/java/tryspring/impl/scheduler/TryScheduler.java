@@ -14,15 +14,24 @@ public class TryScheduler {
 
     @Async
     @Scheduled(fixedRate = 3000)
-    public void scheduledMethod()
-    {
-        System.out.println(LocalDateTime.now() + ":scheduledMethod");
+    public void scheduledMethod() {
+        System.out.println(LocalDateTime.now() + ":scheduledMethod-1");
+
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
-   @Async
-   @Scheduled(fixedRate = 1000)
-   public void scheduledMethod2()
-   {
-       System.out.println(LocalDateTime.now() + ":scheduledMethod2");
-   }
+    @Async
+    @Scheduled(fixedRate = 1000)
+    public void scheduledMethod2() {
+        System.out.println(LocalDateTime.now() + ":scheduledMethod-2");
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
